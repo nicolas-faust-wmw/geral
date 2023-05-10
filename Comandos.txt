@@ -1,0 +1,7 @@
+Get-ChildItem *.sql -Recurse | Rename-Item -NewName {$_.name -replace 'dbo.',''}
+Get-ChildItem *.sql -Recurse | Rename-Item -NewName {$_.name -replace 'UserDefinedFunction.',''}
+Get-ChildItem *.sql -Recurse | Rename-Item -NewName {$_.name -replace 'UserDefinedTableType.',''}
+Get-ChildItem *.sql -Recurse | Rename-Item -NewName {$_.name -replace 'Table.',''}
+Get-ChildItem *.sql -Recurse | Rename-Item -NewName {$_.name -replace 'View.',''}
+Get-ChildItem *.sql -Recurse | Rename-Item -NewName {$_.name -replace 'StoredProcedure.',''}
+Get-ChildItem *.sql -Recurse | Rename-Item -NewName {$_.name -replace 'Synonym.',''}
